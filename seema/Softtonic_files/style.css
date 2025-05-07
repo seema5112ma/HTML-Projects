@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: rgb(228, 230, 230);
+}
+body::-webkit-scrollbar {
+  width: 0.6em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(207, 140, 140);
+  border-radius: 5px;
+}
+
+h1 {
+  margin: 0;
+}
+h3 {
+  margin: 0;
+}
+h4 {
+  margin: 0;
+}
+.top {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(rgb(238, 202, 208), rgb(231, 155, 168));
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  min-height: 20vh;
+}
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.nav-links li {
+  padding: 0 1em;
+}
+.nav-links li a {
+  color: black;
+  text-decoration: none;
+}
+#proButton {
+  padding: 7px 13px;
+  border: 0;
+  border-radius: 5px;
+}
+.newLaunchContainer {
+  min-height: 100%;
+}
+#newLaunchTitle {
+  font-size: 2.7em;
+  margin: 0.25em 0;
+}
+.pricing {
+  font-size: large;
+}
+#originalPrice {
+  text-decoration: line-through;
+}
+#discountePrice {
+  margin-left: 0.5em;
+}
+.addToCartButton {
+  text-transform: uppercase;
+  margin-top: 1.25em;
+  padding: 1em 2em;
+  border: 0;
+  background-color: rgb(90, 102, 209);
+  color: white;
+  border-radius: 5px;
+}
+.productImages {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5em;
+}
+.productImages img {
+  max-height: 90vh;
+}
+.products {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
+}
+.productItems {
+  width: 40vw;
+  padding: 2em 0;
+  text-align: center;
+  box-shadow: 0 0 10px gray;
+  border-radius: 10px;
+  margin: 1em;
+}
+.parent {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.parent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/2.jpg");
+  background-size: cover;
+  z-index: -1;
+}
+#circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  width: 100px;
+  height: 100px;
+  border: 5px dashed white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.2),
+    0 0 0 20px rgba(255, 255, 255, 0.13), 0 0 0 30px rgba(255, 255, 255, 0.13);
+}
+#descriptions {
+  margin-top: 3em;
+  width: 75%;
+  display: grid;
+  grid-template-rows: repeat(6, 30vh);
+  grid-template-columns: repeat(2, 50%);
+  font-size: 0.85em;
+}
+#descriptions img {
+  max-width: 100%;
+  max-height: 100%;
+}
+#gridItem1 {
+  grid-area: 1/1/4/2;
+}
+#gridItem6 {
+  grid-row: 5;
+  grid-column: 1;
+}
+#gridItem7 {
+  grid-row: 6;
+  grid-column: 1;
+}
+#gridItem8 {
+  grid-area: 4/2/7/3;
+}
+.contactContainer {
+  margin: auto;
+  margin-top: 3em;
+  width: 75vw;
+  min-height: 90vh;
+}
+.conatctUs {
+  margin: 1em 15vw 1em 0;
+}
+.footerInputs {
+  margin-top: 0.5em;
+  width: 80%;
+  border: 0;
+  padding: 1em;
+  font-size: 1em;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 3px solid white;
+}
+#textAreaContact {
+  min-height: 25vh;
+}
+.footerInputs:focus {
+  border: 0;
+  outline-width: 0;
+  border-bottom: 3px solid gray;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  nav {
+    font-size: 1rem;
+  }
+  .nav-links {
+    justify-content: center;
+    width: 100vw;
+  }
+  .newLaunch {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 40vh;
+  }
+  #newLaunchTitle {
+    font-size: 1.7em;
+  }
+  .productImages img {
+    max-width: 100vw;
+  }
+  .nav-links li {
+    padding: 0 7px;
+  }
+  .products {
+    flex-wrap: nowrap;
+    height: 50vh;
+    flex-direction: column;
+    align-items: center;
+  }
+  .productItems {
+    width: 80%;
+    padding: 0.5em 0;
+    margin: 1em 0;
+  }
+  .parent {
+    height: 60vh;
+  }
+  .parent::before {
+    left: -50%;
+    width: 150%;
+  }
+  #intro {
+    font-size: 1em;
+  }
+  .descriptions {
+    width: 95vw;
+  }
+  #descriptions {
+    width: 85%;
+    font-size: 1em;
+    grid-template-rows: repeat(4, 30vh);
+  }
+  #descriptions p {
+    font-size: 0.5em;
+  }
+  #gridItem1 {
+    grid-area: 1/1;
+  }
+  #gridItem8 {
+    grid-area: 3/2/4/3;
+  }
+  #gridItem6 {
+    grid-row: 4;
+    grid-column: 1;
+  }
+  #gridItem7 {
+    grid-row: 4;
+    grid-column: 2;
+  }
+  .contactContainer {
+    width: 85vw;
+  }
+  footer {
+    font-size: 0.6em;
+  }
+  .conatctUs {
+    margin: 0.5em 0;
+  }
+}

@@ -1,0 +1,39 @@
+.ff {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.fs {
+  font-size: small;
+}
+
+.fw {
+  font-weight: 5000;
+}
+.lh {
+  line-height: 20%;
+}
+
+.ls {
+  letter-spacing: 2cm;
+}
+.fst {
+  font-style: italic;
+}
+.tt {
+  text-align: center;
+}
+.ta {
+  text-align: left;
+}
+.ws {
+  word-spacing: 10cap;
+}
+
+.bm {
+  padding: 10px 10px 20px 30px;
+  margin-top: 20px;
+  margin-bottom: 30%;
+  border-width: 1px;
+  border-style: dotted;
+  border-color: rgb(145, 26, 6);
+}

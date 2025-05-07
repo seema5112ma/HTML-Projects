@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="http://doublesama.com/wp-content/uploads/2021/07/Mushoku-Tensei-cover-1.jpg"
+      id="img"
+      alt=""
+    />
+    <button id="next">Next</button>
+  </body>
+  <script>
+    let button = document.getElementById("next");
+    button.addEventListener("keypress", function () {
+      let img = document.getElementById("img");
+      console.log(img.getAttribute("src"));
+
+      if (
+        img.getAttribute("src") ==
+        "http://doublesama.com/wp-content/uploads/2021/07/Mushoku-Tensei-cover-1.jpg"
+      ) {
+        img.setAttribute(
+          "src",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRshPlAvlOHE-iHItGmlW4B_1Kb-GDfSyM9wUv_HRCjBzZCawPfnHBX7bfFiqGJW8v4wHw&usqp=CAU"
+        );
+      } else {
+        img.setAttribute(
+          "src",
+          "http://doublesama.com/wp-content/uploads/2021/07/Mushoku-Tensei-cover-1.jpg"
+        );
+      }
+      alert("img source changed to:" + img.getAttribute("src"));
+    });
+  </script>
+</html>

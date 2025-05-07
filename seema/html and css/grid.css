@@ -1,0 +1,24 @@
+.box {
+  background-color: yellow;
+  padding: 10px;
+  color: black;
+}
+
+.grid-container {
+  display: grid;
+  /* grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 50px 50px 50px 50px; */
+
+  grid-auto-columns: 100px;
+  grid-auto-rows: 50px;
+  gap: 5px;
+  grid-template-areas:
+    "box1 box1 box1 box1"
+    "box1 box1 box1 box1"
+    "box1 box1 box1 box1"
+    "box1 box1 box1 box1"
+    "box2 box3 box4 box5"
+    "box2 box6 box4 box5"
+    "box2 box6 box7 box5"
+    "box2 box6 box8 box9";
+}

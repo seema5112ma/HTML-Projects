@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  background-color: rgb(100, 50, 83);
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.img1 {
+  border: 5px solid;
+  outline: 3px;
+  outline-color: blueviolet;
+  border-radius: 20px;
+  background-color: rgba(8, 8, 8, 0.877);
+  width: 40%;
+}
+
+.button:hover {
+  padding: 1cm;
+  background-color: blueviolet;
+  border-radius: 2px;
+  border: 2px solid yellow;
+  gap: 2px;
+  transition: 0.5s;
+}
+img {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+}
+/* .b {
+  gap: 5px;
+} */

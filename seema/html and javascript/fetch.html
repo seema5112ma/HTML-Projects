@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .item {
+        color: rgb(44, 48, 46);
+        margin: 5px;
+        border: solid pink 3px;
+        text-align: center;
+        background-color: rgb(204, 177, 230);
+        width: 200px;
+      }
+      #body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <div id="content"></div>
+  </body>
+  <script>
+    async function fetchdata() {
+      let response = await fetch("https://jsonplaceholder.tyicode.com/post");
+      let data = await response.json();
+      console.log(data);
+      let title = "";
+      data.forEach((item) => {
+        title =
+          title +
+          (
+            <div class="items">
+              ${item.id}
+              <h3>${item.title}</h3>
+              <p>${item.body}</p>
+            </div>
+          );
+      });
+      document.getElementById("container").innerHTML = titlte;
+      console.log(title);
+    }
+    fetchdata();
+  </script>
+</html>
